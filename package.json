@@ -1,20 +1,44 @@
 {
   "name": "ds-design",
   "version": "1.1.5",
-  "description": "",
-  "main": "ds-design.es.ts",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/ds-design.es.ts",
+  "main": "./dist/ds-design.umd.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ds-design.es.ts",
+      "require": "./dist/ds-design.umd.ts"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/daiguanshun/ds-design.git"
+  "dependencies": {
+    "ds-design": "^1.1.4",
+    "vue": "^3.2.25",
+    "vue-clipboard3": "^2.0.0",
+    "vue-router": "^4.0.15"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/daiguanshun/ds-design/issues"
-  },
-  "homepage": "https://github.com/daiguanshun/ds-design#readme"
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "stylus": "^0.57.0",
+    "stylus-loader": "^6.2.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.7",
+    "vitepress": "^0.22.4",
+    "vue-tsc": "^0.34.7"
+  }
 }
