@@ -12,6 +12,7 @@ import Layout from './Layout'
 import Dropdown from './Dropdown'
 import Menu from './Menu'
 import MenuItem from './MenuItem'
+import Message from './Message'
 import Radio from './Radio'
 import Carousel from './Carousel'
 import Table from './Table'
@@ -39,6 +40,7 @@ const components = [
   Dropdown,
   Menu,
   MenuItem,
+  Message,
   Radio,
   Carousel,
   Table,
