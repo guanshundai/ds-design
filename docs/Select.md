@@ -1,20 +1,12 @@
-## 选择框
+## 基本用法
 
-**示例**
-
-<ds-select size='small' style='width: 100px;' />
-
-<ds-select :options="options" @select="handelSelect" style='width: 150px;margin-left: 20px'/>
-
-<ds-select size='large' style='width: 200px;margin-left: 20px' /> <br /><br />
+<ds-select :options="options" @select="handelSelect"/>
 
 **代码**
 
 ```html
 <template>
-  <ds-select size='small' />
   <ds-select :options="options" @select="handelSelect"/>
-  <ds-select size='large' />
 <template>
 
 <script setup lang='ts'>
@@ -29,6 +21,24 @@
     console.log('value:', v, 'label:', l)
   }
 </script>
+```
+
+## 改变大小
+
+<ds-select size='small' style='width: 100px;' />
+
+<ds-select style='width: 150px;margin-left: 20px'/>
+
+<ds-select size='large' style='width: 200px;margin-left: 20px' /> <br /><br />
+
+**代码**
+
+```html
+<template>
+  <ds-select size='small' />
+  <ds-select size='normal'/>
+  <ds-select size='large' />
+<template>
 ```
 
 ## API

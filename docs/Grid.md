@@ -16,12 +16,12 @@
 ```html
 
 <ds-row gap='10px 5px' :row='12'>
-  <ds-col class='flex-r-c' :span='6'>span 6</ds-col>
-  <ds-col class='flex-r-c' :span='6'>span 6</ds-col>
-  <ds-col class='flex-r-c' :span='6'>span 6</ds-col>
-  <ds-col class='flex-r-c' :span='3'>span 3</ds-col>
-  <ds-col class='flex-r-c' :span='3'>span 3</ds-col>
-  <ds-col class='flex-r-c' :span='12'>span 12</ds-col>
+  <ds-col :span='6'>span 6</ds-col>
+  <ds-col :span='6'>span 6</ds-col>
+  <ds-col :span='6'>span 6</ds-col>
+  <ds-col :span='3'>span 3</ds-col>
+  <ds-col :span='3'>span 3</ds-col>
+  <ds-col :span='12'>span 12</ds-col>
 </ds-row>
 
 ```

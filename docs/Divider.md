@@ -1,25 +1,45 @@
-## 分割线
+## 基本用法
 
-**示例**
-
-<ds-divider /> <br />
-<ds-divider type="dashed" /> <br/>
-<ds-divider withText>分割</ds-divider> <br/>
-<ds-divider type="dashed" withText>分割</ds-divider> <br/><br/>
-
-<ds-divider vertical height="36px" /> 
-<ds-divider vertical height="36px" type="dashed" color="red" /> 
+<br>
+<ds-divider />
+<br>
+<ds-divider type="dashed" />
+<br>
 
 **代码**
 
 ```html
 <template>
   <ds-divider />
-  <ds-divider type="dashed" />
+</template>
+```
 
+## 带文字
+
+<br>
+<ds-divider withText>分割</ds-divider> <br/>
+<ds-divider type="dashed" withText>分割</ds-divider> <br/>
+
+**代码**
+
+```html
+<template>
   <ds-divider withText>分割</ds-divider>
   <ds-divider type="dashed" withText>分割</ds-divider>
+</template>
+```
 
+## 垂直分割线
+
+<br>
+<ds-divider vertical height="36px" /> 
+<ds-divider vertical height="36px" type="dashed" color="red" /> 
+<br>
+
+**代码**
+
+```html
+<template>
   <ds-divider vertical height="36px" /> 
   <ds-divider vertical height="36px" type="dashed" color="red" /> 
 </template>

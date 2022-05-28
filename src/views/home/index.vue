@@ -3,25 +3,30 @@
   &nbsp;
   <ds-input v-model="value" size="normal" placeholder="输入名字" @search="getValue" withSearch></ds-input>
   <br /><br />
+
   <ds-select v-model="selectValue" @select="select" :options="options" size="normal" clearable></ds-select>
   <br /><br />
+
   <CloseCircleOutlined />
   <CloseOutlined />
   <DownOutlined />
   <SearchOutlined />
   <SettingOutlined />
-  <LoadingOutlined /> <br /><br />
+  <LoadingOutlined /> 
+  <br /><br />
 
   <span>嘿嘿</span>
   <ds-divider vertical height="16px" width="1px" type="dashed"></ds-divider>
-  <span>哈哈</span> <br /><br />
+  <span>哈哈</span> 
+  <br /><br />
 
   <ds-breadcrumb size="14px">
     <ds-breadcrumb-item href="http://localhost:3000/#/test">嘿嘿嘿</ds-breadcrumb-item>
     <ds-breadcrumb-item activeColor="green" color="red">嘿嘿嘿</ds-breadcrumb-item>
     <ds-breadcrumb-item>嘿嘿嘿</ds-breadcrumb-item>
     <ds-breadcrumb-item>嘿嘿嘿</ds-breadcrumb-item>
-  </ds-breadcrumb><br /><br />
+  </ds-breadcrumb>
+  <br /><br />
 
   <ds-switch @switch="switchHadel" checkedText="开" uncheckedText="关" size="small" />
   <ds-switch @switch="switchHadel" checkedText="开" uncheckedText="关" size="normal" />
@@ -34,9 +39,11 @@
     <ds-col :span="6">aaa</ds-col>
     <ds-col :span="6">aaa</ds-col>
     <ds-col>aaa</ds-col>
-  </ds-row> <br><br>
+  </ds-row> 
+  <br><br>
 
-  <ds-dropdown color="#338eff" :options="options2"></ds-dropdown> <br><br>
+  <ds-dropdown color="#338eff" :options="options2"></ds-dropdown> 
+  <br><br>
 
   <ds-menu :activeIndex="0">
     <ds-menu-item>
@@ -54,10 +61,10 @@
     <ds-menu-item>History</ds-menu-item>
     <ds-menu-item>Message Info</ds-menu-item>
     <ds-menu-item>About Us</ds-menu-item>
-  </ds-menu> <br><br>
+  </ds-menu> 
+  <br><br>
 
   <ds-radio v-model="radioValue" :option="radioOption" name="sex" checkedColor="red" @change="getRadioValue"></ds-radio>
-
   <br><br>
 
   <ds-carousel width="400px" :time="2000" autoplay>
@@ -65,14 +72,18 @@
     <div>2</div>
     <div>3</div>
     <div>4</div>
-    <div>5</div>
-    <div>6</div>
   </ds-carousel>
-
   <br><br>
 
-  <ds-table :columns="columns" :dataSource="dataSource"></ds-table>
+  <!-- <ds-carousel width="400px" :time="2000" autoplay>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </ds-carousel>
+  <br><br> -->
 
+  <ds-table :columns="columns" :dataSource="dataSource" sortable></ds-table>
   <br><br>
 
   <div style="width: 100%;height: 300px;">
@@ -155,7 +166,13 @@ const columns = ref<any>([
   },
   {
     title: 'Savings',
-    dataIndex: 'money'
+    dataIndex: 'money',
+    sort: (a: any, b: any) => a.money - b.money
+  },
+  {
+    title: 'Cost',
+    dataIndex: 'cost',
+    sort: (a: any, b: any) => a.cost - b.cost
   }
 ])
 
@@ -163,17 +180,20 @@ const dataSource = ref<any>([
   {
     key: 1,
     month: 'January',
-    money: '$80'
+    money: '80',
+    cost: 100
   },
   {
     key: 2,
     month: 'February',
-    money: '$100'
+    money: '300',
+    cost: 50
   },
   {
     key: 3,
     month: 'Jun',
-    money: '$1000'
+    money: '200',
+    cost: 80
   },
 ])
 

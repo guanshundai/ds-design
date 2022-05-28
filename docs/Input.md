@@ -1,38 +1,63 @@
-## 输入框
+## 基本用法
 
-**示例**
+<br>
+<ds-input v-model="value" @input='handelInput'/>
 
+**代码**
+
+```html
+<template>
+  <ds-input v-model="value" @input='handelInput'/>
+</template>
+
+<script setup lang='ts'>
+import { ref } from 'vue'
+
+const value = ref<string>('')
+
+const handelInput = (v: string) => {
+  console.log(v, 'input value')
+}
+</script>
+```
+
+## 调整大小
+
+<br>
 <ds-input size="small" />
 <ds-input size="normal" style='margin-left: 10px' />
 <ds-input size="large" style='margin-left: 10px'/> <br><br>
-<ds-input size="normal" withSearch /><br/><br/>
 
 **代码**
 
 ```html
 <template>
   <ds-input size="small" />
-  <ds-input size="normal" @input='handelInput'/>
+  <ds-input size="normal"/>
   <ds-input size="large" />
+</template>
+```
 
-  <ds-input size="normal" withSearch @search='handelSearch' />
+## 带搜索框
 
-  //动态绑定
-  <ds-input v-model="value" />
+<br>
+<ds-input withSearch />
+
+**代码**
+
+```html
+<template>
+  <ds-input withSearch @search='handelSearch' />
 </template>
 
 <script setup lang='ts'>
-  import { ref } from 'vue'
+import { ref } from 'vue'
 
-  const value = ref<string>('')
+const value = ref<string>('')
 
-  const handelInput = (v: string) => {
-    console.log(v, 'input value')
-  }
-
-  const handelSearch = (v: string) => {
-    console.log(v, 'search value')
-  }
+const handelSearch = (v: string) => {
+  console.log(v, 'search value')
+}
 </script>
 ```
 

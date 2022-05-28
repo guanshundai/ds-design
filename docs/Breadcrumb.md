@@ -1,16 +1,29 @@
-## 面包屑
-
-**示例**
+## 基本用法
 
 <ds-breadcrumb size="14px">
-  <ds-breadcrumb-item href="http://localhost:3000/#/test">首页</ds-breadcrumb-item>
-  <ds-breadcrumb-item hoverColor='pink' activeColor="green" color="red">产品</ds-breadcrumb-item>
+  <ds-breadcrumb-item href="https://daiguanshun.cn">首页</ds-breadcrumb-item>
+  <ds-breadcrumb-item>产品</ds-breadcrumb-item>
   <ds-breadcrumb-item>新闻</ds-breadcrumb-item>
   <ds-breadcrumb-item>关于我们</ds-breadcrumb-item>
 </ds-breadcrumb>
 
+**代码**
+
+```html
+<template>
+  <ds-breadcrumb size="14px">
+  <ds-breadcrumb-item href="https://daiguanshun.cn">首页</ds-breadcrumb-item>
+  <ds-breadcrumb-item>产品</ds-breadcrumb-item>
+  <ds-breadcrumb-item>新闻</ds-breadcrumb-item>
+  <ds-breadcrumb-item>关于我们</ds-breadcrumb-item>
+</ds-breadcrumb>
+</template>
+```
+
+## 分隔符
+
 <ds-breadcrumb size="14px">
-  <ds-breadcrumb-item href="http://localhost:3000/#/test">首页</ds-breadcrumb-item>
+  <ds-breadcrumb-item >首页</ds-breadcrumb-item>
   <ds-breadcrumb-item separator='>'>产品</ds-breadcrumb-item>
   <ds-breadcrumb-item separator='>'>新闻</ds-breadcrumb-item>
   <ds-breadcrumb-item separator='>'>关于我们</ds-breadcrumb-item>
@@ -20,13 +33,6 @@
 
 ```html
 <template>
-  <ds-breadcrumb size="14px">
-    <ds-breadcrumb-item href="http://localhost:3000/#/test">首页</ds-breadcrumb-item>
-    <ds-breadcrumb-item hoverColor='pink' activeColor="green" color="red">产品</ds-breadcrumb-item>
-    <ds-breadcrumb-item>新闻</ds-breadcrumb-item>
-    <ds-breadcrumb-item>关于我们</ds-breadcrumb-item>
-  </ds-breadcrumb>
-
   <ds-breadcrumb size="14px">
     <ds-breadcrumb-item>首页</ds-breadcrumb-item>
     <ds-breadcrumb-item separator='>'>产品</ds-breadcrumb-item>

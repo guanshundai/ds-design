@@ -14,14 +14,14 @@
           p-id="1968"></path>
       </svg>
     </div>
-    <div class="ds-carousel-right" @mousemove="handleMove" @mouseleave="handleLeave" @click="rightClick">
+    <div class="ds-carousel-right" @mousemove="handleMove" @mouseleave="handleLeave" @click="rightClick()">
       <svg t="1653274034041" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
         p-id="2964" :width="size" :height="size">
         <path d="M610.88 512L192 93.12 285.12 0l512 512-512 512L192 930.88z" fill="rgb(255, 255, 255, .75)" p-id="2965">
         </path>
       </svg>
     </div>
-    <div class="ds-carousel-dot" id="ds-carousel-dot"></div>
+    <div class="ds-carousel-dot"></div>
   </div>
 </template>
 
@@ -87,7 +87,7 @@ watch(
 onMounted(() => {
   carousel.value = (document.querySelector('.ds-carousel') as any).clientWidth
   const rightList = document.querySelector('.ds-carousel-list') as any
-  const dotFather = document.querySelector('#ds-carousel-dot') as any
+  const dotFather = document.querySelector('.ds-carousel-dot') as any
   let rightListLength = rightList.childNodes.length - 2
 
   //初始化圆点
@@ -200,7 +200,7 @@ const handleLeave = () => {
 }
 
 const leftClick = () => {
-  const dotFather = document.querySelector('#ds-carousel-dot') as any
+  const dotFather = document.querySelector('.ds-carousel-dot') as any
 
   carousel.value = (document.querySelector('.ds-carousel') as any).clientWidth
   const rightList = document.querySelector('.ds-carousel-list') as any
@@ -222,7 +222,7 @@ const leftClick = () => {
 }
 
 const rightClick = () => {
-  const dotFather = document.querySelector('#ds-carousel-dot') as any
+  const dotFather = document.querySelector('.ds-carousel-dot') as any
 
   carousel.value = (document.querySelector('.ds-carousel') as any).clientWidth
   const rightList = document.querySelector('.ds-carousel-list') as any
@@ -244,7 +244,7 @@ const rightClick = () => {
 }
 </script>
 
-<style lang='less'>
+<style lang='less' scoped>
 .ds-carousel {
   width: v-bind(width);
   height: v-bind(height);
@@ -268,7 +268,7 @@ const rightClick = () => {
     flex-direction: row;
     flex-wrap: nowrap;
 
-    & div {
+    :slotted(div) {
       width: v-bind(carouselWidth);
       height: 100%;
       transition: all 1s;

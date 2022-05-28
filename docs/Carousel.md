@@ -1,27 +1,21 @@
-## Carousel 轮播图
-
-**示例**
+## 基本用法
 
 <ds-carousel :time="2000" autoplay>
   <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
-  <div>5</div>
-  <div>6</div>
 </ds-carousel>
 
 **代码**
 
 ```html
-<template>
-  <ds-carousel :time="2000" autoplay>
+<template :time="2000" autoplay>
+  <ds-carousel>
     <div>1</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
-    <div>5</div>
-    <div>6</div>
   </ds-carousel>
 </template>
 ```
