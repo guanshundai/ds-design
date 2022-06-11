@@ -67,12 +67,8 @@
   <ds-radio v-model="radioValue" :option="radioOption" name="sex" checkedColor="red" @change="getRadioValue"></ds-radio>
   <br><br>
 
-  <ds-carousel width="400px" :time="2000" autoplay>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-  </ds-carousel>
+  <ds-carousel :time="3000" autoplay :images="images" :dots="false" style="width: 500px;height: 300px" /> <br>
+  <ds-carousel :time="2000" :images="images2" autoplay />
   <br><br>
 
   <!-- <ds-carousel width="400px" :time="2000" autoplay>
@@ -126,6 +122,10 @@
 import { ref } from "vue";
 
 import Message from "../../components/Message";
+import one from '../../assets/one.jpg'
+import two from '../../assets/two.jpg'
+import three from '../../assets/three.jpg'
+import four from '../../assets/four.jpg'
 
 const loading = ref<boolean>(false);
 const value = ref<string>("");
@@ -206,6 +206,9 @@ const toolbar = ref({
     },
   },
 });
+
+const images = [two,one,three,four]
+const images2 = [two,three,four]
 
 const btnClick = () => {
   loading.value = true;

@@ -80,5 +80,6 @@ onMounted(() => {
   flex-direction: row;
   list-style: none;
   background-color: #fff;
+  list-style-position: inside;
 }
 </style>
