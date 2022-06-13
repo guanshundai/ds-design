@@ -94,5 +94,9 @@ function getSidebar() {
       text: "Table 表格",
       link: "/Table",
     },
+    {
+      text: "Collapse 折叠面板",
+      link: "/Collapse",
+    },
   ];
 }

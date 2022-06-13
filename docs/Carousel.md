@@ -1,12 +1,12 @@
 ## 基本用法
 
-<ds-carousel :time="2000" :images="images" />
+<ds-carousel :time="2000" :images="images" width="100%" />
 
 **代码**
 
 ```html
 <template>
-  <ds-carousel :time="2000" :images="images" />
+  <ds-carousel :time="2000" :images="images" width="100%" />
 </template>
 
 <script setup>
@@ -20,13 +20,13 @@ const images = [two,one,three,four]
 ```
 
 ## 不带面板指示点
-<ds-carousel :time="2000" :images="images" :dots="false" /> 
+<ds-carousel :time="2000" :images="images" :dots="false" width="100%"/> 
 
 **代码**
 
 ```html
 <template>
-  <ds-carousel :time="2000" :images="images" :dots="false" />
+  <ds-carousel :time="2000" :images="images" :dots="false" width="100%"/>
 </template>
 
 <script setup>

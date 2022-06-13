@@ -14,6 +14,8 @@ import DSMenuItem from 'components/MenuItem/index.vue'
 import DSRadio from 'components/Radio/index.vue'
 import DSCarousel from 'components/Carousel/index.vue'
 import DSTable from 'components/Table/index.vue'
+import DSCollapse from 'components/Collapse/index.vue'
+import DSCollapsePanel from 'components/CollapsePanel/index.vue'
 
 import CloseCircleOutlined from 'components/Icon/CloseCircleOutlined.vue'
 import CloseOutlined from 'components/Icon/CloseOutlined.vue'
@@ -39,6 +41,8 @@ export default function(app: any) {
   app.component('ds-radio', DSRadio),
   app.component('ds-carousel', DSCarousel),
   app.component('ds-table', DSTable),
+  app.component('ds-collapse', DSCollapse),
+  app.component('ds-collapse-panel', DSCollapsePanel),
   app.component('CloseCircleOutlined', CloseCircleOutlined),
   app.component('CloseOutlined', CloseOutlined),
   app.component('DownOutlined', DownOutlined),

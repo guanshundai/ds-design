@@ -1,0 +1,94 @@
+<template>
+  <div class="ds-collapse-panel">
+    <div class="header">
+      <svg t="1654937345769" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="2917" width="20" height="16">
+        <path
+          d="M761.056 532.128c0.512-0.992 1.344-1.824 1.792-2.848 8.8-18.304 5.92-40.704-9.664-55.424L399.936 139.744c-19.264-18.208-49.632-17.344-67.872 1.888-18.208 19.264-17.376 49.632 1.888 67.872l316.96 299.84-315.712 304.288c-19.072 18.4-19.648 48.768-1.248 67.872 9.408 9.792 21.984 14.688 34.56 14.688 12 0 24-4.48 33.312-13.44l350.048-337.376c0.672-0.672 0.928-1.6 1.6-2.304 0.512-0.48 1.056-0.832 1.568-1.344C757.76 538.88 759.2 535.392 761.056 532.128z"
+          p-id="2918"></path>
+      </svg>
+      <header>
+        {{ title }}
+      </header>
+    </div>
+    <div class="content">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
+<script setup lang='ts'>
+import { ref, watch } from 'vue';
+
+interface Props {
+  title?: string
+}
+const props = withDefaults(defineProps<Props>(), {
+  title: 'Title'
+})
+
+const title = ref<string>(props.title)
+
+watch(
+  () => props.title,
+  () => title.value = props.title
+)
+</script>
+
+<style scoped lang='less'>
+.ds-collapse-panel {
+
+  &:hover .content {
+    display: flex;
+    height: calc(100%);
+  }
+
+  &:hover .icon {
+    height: calc(100%);
+    transform: rotate(90deg);
+  }
+
+  .header {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-bottom: 0;
+    line-height: 1.5;
+
+    header {
+      font-size: 18px;
+      font-weight: 600;
+      margin-left: 10px;
+
+      .icon {
+        transition: all 2s linear;
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .content {
+    border: 1px solid #dbdbdb;
+    padding: 20px 10px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 0;
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    overflow-y: auto;
+    white-space: normal;
+    word-break: break-all;
+    text-align: left;
+    transition: all 1s linear;
+  }
+}
+</style>

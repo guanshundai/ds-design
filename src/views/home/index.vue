@@ -12,12 +12,12 @@
   <DownOutlined />
   <SearchOutlined />
   <SettingOutlined />
-  <LoadingOutlined /> 
+  <LoadingOutlined />
   <br /><br />
 
   <span>嘿嘿</span>
   <ds-divider vertical height="16px" width="1px" type="dashed"></ds-divider>
-  <span>哈哈</span> 
+  <span>哈哈</span>
   <br /><br />
 
   <ds-breadcrumb size="14px">
@@ -39,10 +39,10 @@
     <ds-col :span="6">aaa</ds-col>
     <ds-col :span="6">aaa</ds-col>
     <ds-col>aaa</ds-col>
-  </ds-row> 
+  </ds-row>
   <br><br>
 
-  <ds-dropdown color="#338eff" :options="options2"></ds-dropdown> 
+  <ds-dropdown color="#338eff" :options="options2"></ds-dropdown>
   <br><br>
 
   <ds-menu :activeIndex="0">
@@ -61,23 +61,22 @@
     <ds-menu-item>History</ds-menu-item>
     <ds-menu-item>Message Info</ds-menu-item>
     <ds-menu-item>About Us</ds-menu-item>
-  </ds-menu> 
+  </ds-menu>
   <br><br>
 
   <ds-radio v-model="radioValue" :option="radioOption" name="sex" checkedColor="red" @change="getRadioValue"></ds-radio>
   <br><br>
 
-  <ds-carousel :time="3000" autoplay :images="images" :dots="false" style="width: 500px;height: 300px" /> <br>
-  <ds-carousel :time="2000" :images="images2" autoplay />
+  <ds-carousel :time="3000" :images="images" :dots="false" width="100%" height="100%"
+    style="width: 500px;height: 260px" /> <br>
+  <ds-carousel :time="2000" :images="images2" autoplay width="100%" />
   <br><br>
 
-  <!-- <ds-carousel width="400px" :time="2000" autoplay>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-  </ds-carousel>
-  <br><br> -->
+  <ds-collapse>
+    <ds-collapse-panel>content1</ds-collapse-panel>
+    <ds-collapse-panel>content2</ds-collapse-panel>
+  </ds-collapse>
+  <br><br>
 
   <ds-table :columns="columns" :dataSource="dataSource" sortable></ds-table>
   <br><br>
@@ -207,8 +206,8 @@ const toolbar = ref({
   },
 });
 
-const images = [two,one,three,four]
-const images2 = [two,three,four]
+const images = [two, one, three, four]
+const images2 = [two, three, four]
 
 const btnClick = () => {
   loading.value = true;
