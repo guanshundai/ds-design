@@ -16,7 +16,7 @@ module.exports = {
     smoothScroll: true,
     // 导航栏配置
     nav: [
-      { text: "我的个人网站", link: "https://daiguanshun.cn" },
+      { text: "vue-base-admin", link: "http://www.daiguanshun.cn:9800/" },
       // { text: '掘金', link: 'https://juejin.cn/user/1855631359481847/posts' },
       { text: "Github", link: "https://github.com/guanshundai" },
       { text: "辽ICP备2021000835号-1", link: "https://beian.miit.gov.cn" },
